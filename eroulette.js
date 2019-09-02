@@ -66,7 +66,7 @@ function analizaDatosArray(){
 
     //En esta parte vamos a calcular la suma entre el número i y su sucesor, por eso preguntamos que no sea el último número del array para evitar errores
     if(i != numerosRecogidos.length -1){
-
+ 
         dato = numerosRecogidos[i];
         datoAux = numerosRecogidos[i+1];
 
