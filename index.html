@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es-ES">
+<head>
+    <link rel="stylesheet" href="estilos.css" type="text/css" media="all" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="eroulette.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <title>EasyRoulette.</title>
+
+  </head>
+<body>
+<div class="header" >
+<h1>EasyRoulette.</h1>
+</div>
+
+<div class = "main">
+
+
+
+<table class="mainTable" style="margin: 0 auto;">
+    
+    <tr>
+      <td></td>
+      <td><button class="btn danger" onclick="introduceDatosArray(3, 'rojo')"> 3 </button></td>
+      <td><button class="btn default" onclick="introduceDatosArray(6, 'negro')"> 6 </button></td>
+      <td><button class="btn danger" onclick="introduceDatosArray(9, 'rojo')"> 9 </button></td>
+      <td><button class="btn danger" onclick="introduceDatosArray(12, 'rojo')"> 12 </button></td>
+      <td><button class="btn default" onclick="introduceDatosArray(15, 'negro')"> 15 </button></td>
+      <td><button class="btn danger" onclick="introduceDatosArray(18, 'rojo')"> 18 </button></td>
+      <td><button class="btn danger" onclick="introduceDatosArray(21, 'rojo')"> 21 </button></td>
+      <td><button class="btn default" onclick="introduceDatosArray(24, 'negro')"> 24 </button></td>
+      <td><button class="btn danger" onclick="introduceDatosArray(27, 'rojo')"> 27 </button></td>
+      <td><button class="btn danger" onclick="introduceDatosArray(30, 'rojo')"> 30 </button></td>
+      <td><button class="btn default" onclick="introduceDatosArray(33, 'negro')"> 33 </button></td>
+      <td><button class="btn danger" onclick="introduceDatosArray(36, 'rojo')"> 36 </button></td>
+    </tr>
+    <tr>
+        <td><button class="btn success" onclick="introduceDatosArray(0, 'verde')"> 0 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(2, 'negro')"> 2 </button></td>
+        <td><button class="btn danger" onclick="introduceDatosArray(5, 'rojo')"> 5 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(8, 'negro')"> 8 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(11, 'negro')"> 11 </button></td>
+        <td><button class="btn danger" onclick="introduceDatosArray(14, 'rojo')"> 14 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(17, 'negro')"> 17 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(20, 'negro')"> 20 </button></td>
+        <td><button class="btn danger" onclick="introduceDatosArray(23, 'rojo')"> 23 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(26, 'negro')"> 26 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(29, 'negro')"> 29 </button></td>
+        <td><button class="btn danger" onclick="introduceDatosArray(32, 'rojo')"> 32 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(35, 'negro')"> 35 </button></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button class="btn danger" onclick="introduceDatosArray(1, 'rojo')"> 1 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(4, 'negro')"> 4 </button></td>
+        <td><button class="btn danger" onclick="introduceDatosArray(7, 'rojo')"> 7 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(10, 'negro')"> 10 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(13, 'negro')"> 13 </button></td>
+        <td><button class="btn danger" onclick="introduceDatosArray(16, 'rojo')"> 16 </button></td>
+        <td><button class="btn danger" onclick="introduceDatosArray(19, 'rojo')"> 19 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(22, 'negro')"> 22 </button></td>
+        <td><button class="btn danger" onclick="introduceDatosArray(25, 'rojo')"> 25 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(28, 'negro')"> 28 </button></td>
+        <td><button class="btn default" onclick="introduceDatosArray(31)"> 31 </button></td>
+        <td><button class="btn danger" onclick="introduceDatosArray(34, 'rojo')"> 34 </button></td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <button class="btn info" onclick="analizaDatosArray()">Calcular</button>
+  <button class="btn info" onclick="resetearNumeros()">Resetear</button>
+
+</div>
+
+
+<div class="numerosIntroducidos" id="numerosIntroducidos">
+Aún no has introducido ningún número. 
+</div>
+
+<div class="numerosIntroducidos" id="resultado">
+  Click en calcular para obtener resultados.
+ </div>
+ 
+ 
+ <div id="grafico" class="numerosIntroducidos">
+  </div> 
+
+  <div id="donutchart" class="numerosIntroducidos">
+    </div> 
+
+
+ 
+      
+
+
+
+
+<footer><p style="align-content: center">Creado por: <b>Pedro Carnerero Martínez</b></p></footer>
+
+
+
+
+
+</html>
