@@ -17,9 +17,9 @@ function introduceDatosArray(dato, color){
     //Actualizamos la gráfica
     actualizarGrafica(dato);
     drawChart();
-
     actualizarGraficaColor(color);
     drawPieChart();
+   
     //Establecemos un máximo de 10 números
     if(numerosRecogidos.length <= 10){
         
@@ -33,6 +33,16 @@ function introduceDatosArray(dato, color){
     }
 
 
+    }
+
+    function resizeHandler () {
+        chart.draw(data, options);
+    }
+    if (window.addEventListener) {
+        window.addEventListener('resize', resizeHandler, false);
+    }
+    else if (window.attachEvent) {
+        window.attachEvent('onresize', resizeHandler);
     }
 
 
@@ -197,6 +207,7 @@ function resetearNumeros(){
     arrayColor = [0,0,0];
     drawChart();
     drawPieChart();
+ 
 
 
 }
@@ -208,6 +219,7 @@ function compararMenoraMayor ( a, b ){ return a - b; }
 //Creamos la función que cargará la gráfica
 google.charts.load("current", {packages:['corechart']});
     google.charts.setOnLoadCallback(drawChart);
+    resizeHandler();
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
         ["Número", "Repeticiones", { role: "style" } ],
@@ -263,8 +275,8 @@ google.charts.load("current", {packages:['corechart']});
       var options = {
         title: "Repeticiones de los números",
       
-        width: 1500,
-        height: 250,
+        width: '90%',
+        height: '250px',
         bar: {groupWidth: "95%"},
         legend: { position: "none" },
         vAxis: {
